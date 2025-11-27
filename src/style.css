@@ -1,0 +1,274 @@
+* {
+  scrollbar-width: 8px;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 0.125fr 1fr;
+  align-items: center;
+}
+
+.add {
+  margin: 0px 5px;
+}
+
+.title {
+  text-align: center;
+}
+
+/* ADD BUTTON */
+.header h5 {
+  background-color: #0c0c0c;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin: 5px 0px;
+  padding: 10px 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.header h5:hover {
+  background-color: #333;
+}
+
+.input {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+}
+
+.box {
+  overflow: hidden;
+  width: 300px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #0a3d62;
+  padding: 35px 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+.box label {
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+  color: #0a3d62;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* POPUP INPUT */
+.box input {
+  display: block;
+  width: 95%;
+  padding: 9px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn button {
+  margin-top: 10px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0a3d62;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.btn button:hover {
+  background-color: #074b8a;
+}
+
+/* ERROR */
+.error {
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* MAIN CONTAINER */
+.main {
+  background: linear-gradient(135deg, #074b8a, #093e6d);
+  width: 80%;
+  margin: 0px auto 2rem;
+  min-height: 78vh;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  flex-wrap: wrap;
+}
+
+.slide {
+  min-width: 250px;
+  flex: 1 1 250px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 7px;
+  width: 100%;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+}
+
+.slide.highlight {
+  border: 3px solid #1cd7ac;
+  scale: 1.02;
+  background: rgba(28, 215, 172, 0.1);
+}
+
+.count {
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 25px; /* same width */
+  height: 25px; /* same height */
+
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 50%;
+
+  float: right;
+}
+
+/* SLIDE TITLE */
+.slide h2 {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.index {
+  margin: 15px;
+}
+
+.items {
+  max-height: 60vh;
+  width: 100%;
+  overflow: auto;
+}
+
+.item {
+  margin: 10px 20px 0 10px;
+  border: 2px solid #1cd7ac;
+  border-radius: 5px;
+  padding: 15px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.2s;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.pick {
+  cursor: grab;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.itemName {
+  display: inline;
+  margin: 0 8px;
+}
+
+.complete {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+  .header {
+    grid-template-columns: 0.25fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .title h1 {
+    margin: 15px 0 10px 0;
+  }
+
+  .header h5 {
+    margin: 10px 0 15px 0;
+    padding: 10px 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title h1 {
+    margin: 10px 0 4px 0;
+    font-size: 28px;
+  }
+
+  .box {
+    width: 250px;
+    position: absolute;
+    top: 37%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title h1 {
+    font-size: 20px;
+  }
+  .header h5 {
+    margin: 8px 0 10px 0;
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+  .box {
+    width: 210px;
+    position: absolute;
+    top: 36%;
+  }
+}
