@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Main from "./main.jsx";
+import Main from "./Main.jsx";
 import Header from "./Header.jsx";
 
 export default function App() {
