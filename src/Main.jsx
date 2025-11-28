@@ -65,7 +65,11 @@ export default function Main({
 
     const { listName, index } = dragData;
 
-    if (listName === targetListName) return;
+    if (listName === targetListName) {
+      setDragData(null);
+      setDragOverSlide(null);
+      return;
+    }
 
     let item;
 
